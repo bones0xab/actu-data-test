@@ -10,6 +10,7 @@ def snippet(text: str, n: int = 220) -> str:
 
 def search(docs: List[Dict[str, str]], question: str, top_k: int = 3) -> List[Dict[str, str]]:
     q = set(_tokens(question))
+    print(f"TESTING THE TOKENS {q}")
     if not q:
         return []
 

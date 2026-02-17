@@ -27,7 +27,7 @@ def query(req: QueryRequest, tenant_id: str = Depends(get_tenant_id)):
 
     sources = [Source(filename=h["filename"], snippet=snippet(h["content"])) for h in hits]
 
-    # Safe junior answer: only what you found + sources
+    # Only what I found plus source
     answer = "Relevant excerpts:\n" + "\n".join(
         f"- {s.filename}: {s.snippet}" for s in sources
     )
