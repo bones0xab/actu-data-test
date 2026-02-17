@@ -3,6 +3,7 @@ from app.deps import get_tenant_id
 from app.schemas import QueryRequest, QueryResponse, Source
 from app.ingest import load_docs
 from app.store import search, snippet
+from app.ollama_Agent import answer_with_ollama
 
 app = FastAPI(title="Multi-tenant SaaS Test")
 
